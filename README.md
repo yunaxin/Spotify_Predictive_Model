@@ -57,8 +57,7 @@ First, we explored the distribution of Spotify popularity scores.
   height="600"
   frameborder="0">
 </iframe>
-
-
+<br>
 The histogram above shows a right-skewed distribution, with most tracks receiving relatively low to moderate popularity scores and fewer tracks achieving very high popularity. This suggests that highly popular songs are less common in the dataset, which may make popularity prediction more challenging since there are fewer examples of highly popular tracks for the model to learn from.
 
 
