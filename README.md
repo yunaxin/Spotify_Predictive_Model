@@ -103,7 +103,7 @@ We next examined the missingness of the `tempo` column by testing whether its mi
 
 To conduct these tests, we created a Boolean indicator column, `tempo_missing`, which records whether the `tempo` value is missing for each track. 
 
-Test 1: Track Genre and Tempo
+#### Test 1: Track Genre and Tempo
 
 **Null Hypothesis**: The missingness of `tempo` does not depend on `track_genre`.  
 **Alternative Hypothesis**: The missingness of `tempo` depends on `track_genre`. 
@@ -112,7 +112,10 @@ Test 1: Track Genre and Tempo
 
 **Significance level**: 0.05
 
-Test 2: Release Year and Tempo
+
+After performing the permutation test, we obtained a p-value of 0.0. Since the p-value is less than 0.05, we reject the null hypothesis. This suggests that the missingness of `tempo` does depend on `track_genre`.
+
+#### Test 2: Release Year and Tempo
 
 **Null Hypothesis**: The missingness of `tempo` does not depend on a track's `release_year`. 
 **Alternative Hypothesis**: The missingness of `tempo` depends on a track's `release_year`. 
@@ -120,6 +123,8 @@ Test 2: Release Year and Tempo
 **Test Statistic**: Absolute Difference in the mean `release_year` between tracks with missing `tempo` values and tracks with non-missing `tempo` values. 
 
 **Significance level**: 0.05
+
+After performing the permutation test, we obtained a p-value of 0.0. Since the p-value is less than 0.05, we reject the null hypothesis. This suggests that the missingness of `tempo` does depend on `release_year`.
 
 ## Hypothesis Testing 
 
