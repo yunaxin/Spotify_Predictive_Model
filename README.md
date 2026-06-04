@@ -234,9 +234,23 @@ Before selecting features, we evaluated each one using three methods:
 
 1. Correlation — release_year (0.295), loudness (0.251), and energy (0.241) had the strongest positive correlations with popularity. instrumentalness (-0.209) and acousticness (-0.199) had the strongest negative correlations, highly instrumental or acoustic songs tend to be less popular on Spotify, which is dominated by vocal-heavy genres like pop and hip-hop.
 
-2. Permutation Importance — measures how much the model's F1 score drops when a feature is shuffled. track_genre (0.278) was by far the most important feature, followed by release_year (0.044). Every feature had positive permutation importance, confirming all features contributed to the model.
+<iframe
+  src="assets/feature_correlation.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
-3. Ablation Testing — removing any single feature dropped model accuracy, even features with low correlation like num_artists (-0.038). This confirms that Random Forest captures non-linear patterns that correlation alone misses.
+3. Permutation Importance — measures how much the model's F1 score drops when a feature is shuffled. track_genre (0.278) was by far the most important feature, followed by release_year (0.044). Every feature had positive permutation importance, confirming all features contributed to the model.
+
+<iframe
+  src="assets/permutation_importance.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+4. Ablation Testing — removing any single feature dropped model accuracy, even features with low correlation like num_artists (-0.038). This confirms that Random Forest captures non-linear patterns that correlation alone misses.
 
 <iframe
   src="assets/confusion_matrix.html"
