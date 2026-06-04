@@ -193,7 +193,7 @@ To further validate our findings, we also explored the relationship between temp
 
 To investigate whether genre is associated with song popularity, we conducted a hypothesis test comparing the genre distributions of popular and non-popular songs.
 
-**Null Hypothesis**: The distribution of `track_genre` is the same for popular and non-popular songs.
+**Null Hypothesis**: The distribution of `track_genre` is the same for popular and non-popular songs. <br>
 **Alternative Hypothesis**: The distribution of `track_genre` differs between popular and non-popular songs.
 
 **Test Statistic**: Total Variation Distance (TVD) between the genre distributions of popular and non-popular songs.
