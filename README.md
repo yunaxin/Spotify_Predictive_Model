@@ -222,3 +222,20 @@ We engineered three new features on top of the baseline:
 1. `loudness_energy_ratio` (loudness / energy): captures the relationship between loudness and energy that neither feature alone conveys. A song can be loud but low energy, or high energy but quiet.
 2. `tempo_filled` : filled 22,114 missing tempo values (19.4% of rows) using the genre median rather than the overall median — because a missing tempo in "classical" is likely different from a missing tempo in "hip-hop".
 3. `num_artists` : counts the number of artists on a track by splitting the artists column by semicolons. Despite having low linear correlation (-0.038), removing it consistently dropped model accuracy, suggesting Random Forest captures non-linear patterns between collaboration count and popularity.
+
+### Hyperparameter Tuning
+
+For the final model, we used `GridSearchCV` with 5-fold cross validation to tune the `RandomForestClassifier`. We tuned: 
+  • n_estimators — number of trees (too few → underfitting)
+  • max_depth — depth of each tree (too deep → overfitting)
+
+The best parameters were `max_depth=20` and `n_estimators=100`.
+
+| Metric | Baseline Model | Final Model |
+|---|---:|---:|
+| Accuracy | 0.797 | 0.806 |
+| Precision | 0.772 | 0.781 |
+| Recall | 0.661 | 0.681 |
+| F1-score | 0.712 | 0.727 |
+
+The final model improved over the baseline across all four metrics. Since the target variable is imbalanced, we focus mainly on F1-score rather than accuracy alone. The F1-score increased from 0.712 to 0.727, suggesting that the final model does a better job balancing precision and recall when identifying popular tracks. The improvement is modest, but it shows that adding more audio features and tuning the Random Forest model helped capture additional patterns related to Spotify track popularity.
