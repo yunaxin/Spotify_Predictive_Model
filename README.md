@@ -44,15 +44,16 @@ To focus on our research question, we kept only the relevant columns described a
 4. We also created a new column by converting `duration_ms` into a more interpretable feature, `duration_min`, which represents track duration in minutes. In addition, we created another new feature, `num_artists`, by counting the number of artists associated with each track, allowing us to analyze whether collaborations are related to popularity.
 5. Finally, after examining the distribution of Spotify popularity scores, we created a binary target variable, `is_popular`, where tracks with a popularity score of 55 or greater were labeled as popular and tracks below 55 were labeled as not popular. This transformed the problem into a classification task for our predictive modeling.
 
-Below is the head of our cleaned DataFrame.
+Below is the head of our cleaned DataFrame. 
 
-| track_id               |   popularity | track_genre   |   danceability |   energy |   loudness |   speechiness |   acousticness |   instrumentalness |   liveness |   valence |   tempo | explicit   | artists                |   duration_ms | release_date        |   release_year |   duration_min |   num_artists | is_popular   |
-|:-----------------------|-------------:|:--------------|---------------:|---------:|-----------:|--------------:|---------------:|-------------------:|-----------:|----------:|--------:|:-----------|:-----------------------|--------------:|:--------------------|---------------:|---------------:|--------------:|:-------------|
-| 5SuOikwiRyPMVoIQDJUgSV |           73 | acoustic      |          0.676 |   0.461  |     -6.746 |        0.143  |         0.0322 |           1.01e-06 |     0.358  |     0.715 |  87.917 | False      | Gen Hoshino            |        230666 | 1974-01-01 00:00:00 |           1974 |           3.84 |             1 | True         |
-| 4qPNDBW1i3p13qLCt0Ki3A |           55 | acoustic      |          0.42  |   0.166  |    -17.235 |        0.0763 |         0.924  |           5.56e-06 |     0.101  |     0.267 |  77.489 | False      | Ben Woodward           |        149610 | 1995-04-01 00:00:00 |           1995 |           2.49 |             1 | True         |
-| 1iJBSr7s7jYXzM8EGcbK5b |           57 | acoustic      |          0.438 |   0.359  |     -9.734 |        0.0557 |         0.21   |           0        |     0.117  |     0.12  |  76.332 | False      | Ingrid Michaelson;ZAYN |        210826 | 1973-01-01 00:00:00 |           1973 |           3.51 |             2 | True         |
-| 6lfxq3CG4xtTiEg7opyCyx |           71 | acoustic      |          0.266 |   0.0596 |    -18.515 |        0.0363 |         0.905  |           7.07e-05 |     0.132  |     0.143 | 181.74  | False      | Kina Grannis           |        201933 | 2018-08-10 00:00:00 |           2018 |           3.37 |             1 | True         |
-| 5vjLSffimiIP26QG5WcN2K |           82 | acoustic      |          0.618 |   0.443  |     -9.681 |        0.0526 |         0.469  |           0        |     0.0829 |     0.167 | nan     | False      | Chord Overstreet       |        198853 | 2017-02-03 00:00:00 |           2017 |           3.31 |             1 | True         |
+| track_id               | track_genre   |   popularity |   danceability |   energy |   acousticness | explicit   |   release_year |
+|:-----------------------|:--------------|-------------:|---------------:|---------:|---------------:|:-----------|---------------:|
+| 5SuOikwiRyPMVoIQDJUgSV | acoustic      |           73 |          0.676 |   0.461  |         0.0322 | False      |           1974 |
+| 4qPNDBW1i3p13qLCt0Ki3A | acoustic      |           55 |          0.42  |   0.166  |         0.924  | False      |           1995 |
+| 1iJBSr7s7jYXzM8EGcbK5b | acoustic      |           57 |          0.438 |   0.359  |         0.21   | False      |           1973 |
+| 6lfxq3CG4xtTiEg7opyCyx | acoustic      |           71 |          0.266 |   0.0596 |         0.905  | False      |           2018 |
+| 5vjLSffimiIP26QG5WcN2K | acoustic      |           82 |          0.618 |   0.443  |         0.469  | False      |           2017 |
+*Note: For readability, only a subset of the columns most relevant to our analysis is shown.
 
 
 ### Univariate Analysis
