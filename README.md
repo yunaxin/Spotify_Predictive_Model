@@ -130,8 +130,8 @@ We also look at how audio features differ between popular and non-popular songs.
 
 | is_popular   |   danceability |   energy |   loudness |   speechiness |   acousticness |   instrumentalness |   liveness |   valence |   tempo |
 |:-------------|---------------:|---------:|-----------:|--------------:|---------------:|-------------------:|-----------:|----------:|--------:|
-| False        |       0.561817 | 0.642425 |   -8.3648  |     0.086674  |       0.322024 |          0.170644  |   0.221245 |  0.4752   | 123.434 |
-| True         |       0.587561 | 0.636829 |   -7.81969 |     0.0761912 |       0.285415 |          0.0951894 |   0.181311 |  0.469061 | 121.795 |
+| False        |           0.56 |     0.64 |      -8.36 |          0.09 |           0.32 |               0.17 |       0.22 |      0.48 |  123.43 |
+| True         |           0.59 |     0.64 |      -7.82 |          0.08 |           0.29 |               0.1  |       0.18 |      0.47 |  121.79 |
 
 The table above compares the average audio features between popular and non-popular songs. Popular songs tend to have slightly higher average danceability scores and higher loudness values, suggesting that more rhythmically engaging and louder tracks may perform better on Spotify. Popular songs also show lower average acousticness and instrumentalness, indicating that mainstream songs in the dataset are generally less acoustic and more vocal-focused.
 
