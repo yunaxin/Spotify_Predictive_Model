@@ -1,4 +1,5 @@
-# Spotify_Predictive_Model
+# Spotify Track Popularity Prediction
+### *Using audio features and genre to classify popular songs*
 
 ## Introduction
 
