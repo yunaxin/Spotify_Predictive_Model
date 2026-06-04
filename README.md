@@ -149,7 +149,7 @@ If additional information were available about how Spotify computes audio featur
 
 ### Missingness Dependency
 
-We next examined the missingness of the `tempo` column by testing whether its missingness depends on other variables in the dataset. Specifically, we investigated whether the missingness of tempo depends on `track_genre` or `release_year`.
+We next examined the missingness of the `tempo` column by performing permutation tests to determine whether its missingness depends on other observed variables in the dataset. Specifically, we investigated whether the missingness of tempo depends on `track_genre` or `release_year`.
 
 To conduct these tests, we created a Boolean indicator column, `tempo_missing`, which records whether the `tempo` value is missing for each track. 
 
