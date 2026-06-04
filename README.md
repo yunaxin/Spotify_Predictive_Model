@@ -132,5 +132,7 @@ After performing the permutation test, we obtained a p-value of 0.0. Since the p
 
 The prediction problem is: can we predict whether a Spotify track is popular using its audio features, genre, and track metadata?
 This is a binary classification problem. The response variable is `is_popular`, created by thresholding the popularity score at 50, tracks scoring 50 or above are labeled popular (1), and the rest not popular (0). This threshold labels the top 25% of tracks as popular, giving a reasonable class balance.
-At the time of prediction, all audio features, genre, and metadata (duration, explicit status, release year, number of artists) are known properties of the track itself — not outcomes that happen after release.
-I chose F1 score as my evaluation metric instead of accuracy because the dataset is imbalanced, which only about 25% of tracks are popular. A model could achieve high accuracy by simply predicting "not popular" for every track. F1 balances precision and recall, giving a more honest measure of how well the model identifies popular tracks.
+
+At the time of prediction, all audio features, genre, and metadata (duration, explicit status, release year, number of artists) are known properties of the track itself, not outcomes that happen after release.
+
+We chose F1 score as our evaluation metric instead of accuracy because the dataset is imbalanced, which only about 25% of tracks are popular. A model could achieve high accuracy by simply predicting "not popular" for every track. F1 balances precision and recall, giving a more honest measure of how well the model identifies popular tracks.
