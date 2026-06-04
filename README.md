@@ -200,6 +200,13 @@ To investigate whether genre is associated with song popularity, we conducted a 
 
 **Significance level**: 0.05
 
+<iframe
+  src="assets/hypothesis_test.html"
+  width="900"
+  height="400"
+  frameborder="0">
+</iframe>
+
 The observed TVD (0.479) is substantially larger than the values generated under the null distribution, resulting in a p-value that is effectively 0. Since the p-value is well below our significance level of 0.05, therefore we rejeuct the null hypothesis. This suggests that the distribution of genres differs between popular and non-popular songs and that genre may be an important factor associated with song popularity.
 
 ## Framing a Prediction Problem
