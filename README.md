@@ -35,7 +35,7 @@ The dataset contains many variables; however, our analysis focuses on the follow
 
 ### Data Cleaning 
 
-To focus on our research question, we kept only the columns described above and removed the remaining columns from the dataset.
+To focus on our research question, we kept only the relevant columns described above and removed the remaining columns from the dataset.
 
 1. We start by examining the dataset for missing values. We found that the `tempo` column contained over 22,000 missing values, which could affect analyses involving tempo. Since tempo is an important audio feature, we chose to preserve these missing values for later missingness analysis rather than immediately removing the affected observations.
 2. Next, we checked for duplicate observations and removed duplicate tracks to ensure that each song was represented only once in the dataset. This helps prevent certain tracks from being overrepresented in both the analysis and predictive modeling process.
