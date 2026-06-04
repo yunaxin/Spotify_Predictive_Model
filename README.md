@@ -9,6 +9,31 @@ We use the Spotify Music Tracks dataset, which contains 114,000 tracks and 22 co
 
 Our main data science question is: Can we predict whether a Spotify track becomes popular using its audio features and genre? This question is relevant because music platforms, artists, and playlist curators often rely on data to understand listener behavior and identify patterns behind successful songs. While popularity is influenced by many outside factors that are not captured in this dataset, the available audio features still give us a way to study whether certain types of songs are more likely to perform well.
 
+## Relevant Columns
+
+**`popularity`**: Spotify’s popularity score for each track, ranging from 0 to 100. Higher values indicate higher popularity.
+
+**`is_popular`**: A derived binary column. Tracks with popularity scores of at least 55 are labeled as popular.
+
+**`track_genre`**: The genre label for each track. This is used to compare popularity and audio patterns across genres.
+
+**`danceability`**: A score from 0 to 1 that measures how suitable a track is for dancing.
+
+**`energy`**: A score from 0 to 1 that measures the intensity and activity of a track.
+
+**`valence`**: A score from 0 to 1 that measures how positive or cheerful a track sounds.
+
+**`acousticness`**: A score from 0 to 1 that measures how likely a track is to be acoustic.
+
+**`instrumentalness`**: A score from 0 to 1 that estimates whether a track contains no vocals.
+
+**`loudness`**: The overall loudness of the track in decibels.
+
+**`tempo`**: The estimated beats per minute of the track.
+
+**`duration_min`**: A derived column showing the track length in minutes.
+
+**`explicit`**: A Boolean column indicating whether the track contains explicit content.
 
 
 Prediction Problem
