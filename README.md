@@ -187,7 +187,7 @@ After performing the permutation test, we obtained a p-value of 0.0. Since the p
 </iframe>
 After performing the permutation test, we obtained a p-value of 0.0. Since the p-value is less than 0.05, we reject the null hypothesis. This suggests that the missingness of `tempo` does depend on `release_year`.
 
-To further validate our findings, we also explored the relationship between tempo missingness and several other observed variables in the dataset. Across these additional permutation tests, the observed test statistics were consistently much larger than those generated under the null distributions. These results align with the two tests presented above and provide further support for our conclusion that the missingness of tempo is more consistent with a MAR mechanism than an MCAR mechanism.
+To further validate our findings, we also explored the relationship between tempo missingness and several other observed variables in the dataset. Across these additional permutation tests, the observed test statistics were consistently much larger than those generated under the null distributions. These results align with the two tests presented above and provide further support for our conclusion that the missingness of tempo is more consistent with a MAR mechanism.
 
 ## Hypothesis Testing 
 
