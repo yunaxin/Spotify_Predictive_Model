@@ -14,20 +14,20 @@ We focus on the following columns that are relevant to our analysis:
 
 | Column | Description |
 |----------|-------------|
-| Popularity | Spotify popularity score ranging from 0 to 100. |
-| Track_genre | Genre of the track as labeled by Spotify. |
-| Danceability | Measures how suitable a track is for dancing based on tempo, rhythm stability, and beat strength (0–1). |
-| Energy | Measures the perceptual intensity and activity level of a track (0–1). |
-| Loudness | Measures the overall loudness of a track in decibels (dB). |
-| Speechiness | Measures the presence of spoken words within a track. |
-| Acousticness | Estimates the confidence that the track is acoustic rather than electronically produced (0–1). |
-| Instrumentalness | Estimates the probability that the track contains little to no vocals (0–1). |
-| Liveness | Estimates the probability that the track was recorded with a live audience (0–1). |
-| Valence | Measures the musical positivity of a track, where higher values indicate happier or more cheerful sounds (0–1). |
-| Tempo | Estimated tempo of the track in beats per minute (BPM). |
-| Artists | Name(s) of the artist(s). |
-| Duration_ms | Duration of the track in milliseconds. |
-| Release_date | Release date of the track. |
+| `popularity` | Spotify popularity score ranging from 0 to 100. |
+| `track_genre` | Genre of the track as labeled by Spotify. |
+| `danceability` | Measures how suitable a track is for dancing based on tempo, rhythm stability, and beat strength (0–1). |
+| `energy` | Measures the perceptual intensity and activity level of a track (0–1). |
+| `loudness` | Measures the overall loudness of a track in decibels (dB). |
+| 'speechiness` | Measures the presence of spoken words within a track. |
+| `acousticness` | Estimates the confidence that the track is acoustic rather than electronically produced (0–1). |
+| `instrumentalness` | Estimates the probability that the track contains little to no vocals (0–1). |
+| `liveness` | Estimates the probability that the track was recorded with a live audience (0–1). |
+| `valence` | Measures the musical positivity of a track, where higher values indicate happier or more cheerful sounds (0–1). |
+| `tempo` | Estimated tempo of the track in beats per minute (BPM). |
+| `artists` | Name(s) of the artist(s). |
+| `duration_ms` | Duration of the track in milliseconds. |
+| `release_date` | Release date of the track. |
 
 
 
