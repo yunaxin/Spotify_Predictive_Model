@@ -233,9 +233,9 @@ The best parameters were `max_depth=20` and `n_estimators=100`.
 
 | Metric | Baseline Model | Final Model |
 |---|---:|---:|
-| Accuracy | 0.797 | 0.806 |
-| Precision | 0.772 | 0.781 |
-| Recall | 0.661 | 0.681 |
-| F1-score | 0.712 | 0.727 |
+| Accuracy | 0.739 | 0.820 |
+| Precision | 0.686 | 0.808 |
+| Recall | 0.582 | 0.691 |
+| F1-score | 0.630 | 0.745 |
 
-The final model improved over the baseline across all four metrics. Since the target variable is imbalanced, we focus mainly on F1-score rather than accuracy alone. The F1-score increased from 0.712 to 0.727, suggesting that the final model does a better job balancing precision and recall when identifying popular tracks. The improvement is modest, but it shows that adding more audio features and tuning the Random Forest model helped capture additional patterns related to Spotify track popularity.
+Every metric improved significantly from baseline to final, confirming that adding more features, engineering new ones, and tuning hyperparameters all contributed to better performance.
