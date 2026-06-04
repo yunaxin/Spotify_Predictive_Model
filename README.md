@@ -174,3 +174,10 @@ Before selecting features, we evaluated each one using three methods:
 2. Permutation Importance — measures how much the model's F1 score drops when a feature is shuffled. track_genre (0.278) was by far the most important feature, followed by release_year (0.044). Every feature had positive permutation importance, confirming all features contributed to the model.
 
 3. Ablation Testing — removing any single feature dropped model accuracy, even features with low correlation like num_artists (-0.038). This confirms that Random Forest captures non-linear patterns that correlation alone misses.
+
+### Engineered Features
+We engineered three new features on top of the baseline:
+
+1. `loudness_energy_ratio` (loudness / energy): captures the relationship between loudness and energy that neither feature alone conveys. A song can be loud but low energy, or high energy but quiet.
+2. `tempo_filled` : filled 22,114 missing tempo values (19.4% of rows) using the genre median rather than the overall median — because a missing tempo in "classical" is likely different from a missing tempo in "hip-hop".
+3. `num_artists` : counts the number of artists on a track by splitting the artists column by semicolons. Despite having low linear correlation (-0.038), removing it consistently dropped model accuracy, suggesting Random Forest captures non-linear patterns between collaboration count and popularity.
