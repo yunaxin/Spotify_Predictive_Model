@@ -53,8 +53,8 @@ Below is the head of our cleaned DataFrame.
 | 1iJBSr7s7jYXzM8EGcbK5b | acoustic      |           57 |          0.438 |   0.359  |         0.21   | False      |           1973 |
 | 6lfxq3CG4xtTiEg7opyCyx | acoustic      |           71 |          0.266 |   0.0596 |         0.905  | False      |           2018 |
 | 5vjLSffimiIP26QG5WcN2K | acoustic      |           82 |          0.618 |   0.443  |         0.469  | False      |           2017 |
-*Note: For readability, only a subset of the columns most relevant to our analysis is shown.
 
+Note: For readability, only a subset of the columns most relevant to our analysis is shown.
 
 ### Univariate Analysis
 
