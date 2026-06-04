@@ -143,7 +143,9 @@ However, many of the differences between the two groups remain relatively small,
 
 ### NMAR Analysis
 
-We believe the missing values in the `tempo` column are unlikely to be Not Missing At Random (NMAR). Instead, the missingness may be related to limitations in Spotify's audio analysis process or metadata collection. Since the reason a tempo value is missing is likely associated with factors other than the tempo itself, the missingness may be Missing At Random (MAR) rather than NMAR. 
+We believe the missing values in the `tempo` column are unlikely to be Not Missing At Random (NMAR). Instead, the missingness may be related to limitations in Spotify's audio analysis process or metadata collection rather than the tempo value itself.
+
+If additional information were available about how Spotify computes audio features, whether a track failed audio processing, or why certain metadata could not be extracted, this information could help explain why tempo values are missing. Since the missingness is likely associated with factors other than the tempo itself, we believe the missingness mechanism is more consistent with **Missing At Random (MAR)** than **NMAR**.
 
 ### Missingness Dependency
 
@@ -184,6 +186,8 @@ After performing the permutation test, we obtained a p-value of 0.0. Since the p
   frameborder="0">
 </iframe>
 After performing the permutation test, we obtained a p-value of 0.0. Since the p-value is less than 0.05, we reject the null hypothesis. This suggests that the missingness of `tempo` does depend on `release_year`.
+
+To further validate our findings, we also explored the relationship between tempo missingness and several other observed variables in the dataset. Across these additional permutation tests, the observed test statistics were consistently much larger than those generated under the null distributions. These results align with the two tests presented above and provide further support for our conclusion that the missingness of tempo is more consistent with a MAR mechanism than an MCAR mechanism.
 
 ## Hypothesis Testing 
 
