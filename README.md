@@ -73,7 +73,7 @@ Next, we looked at the most common genres.
 <iframe
   src="assets/top_genres.html"
   width="900"
-  height="600"
+  height="400"
   frameborder="0">
 </iframe>
 This barchart above shows the top 10 most common genres in the dataset. The frequences of these genres appear to be very similar, with each genre containing close to 1000 tracks. This suggests that the dataset is relatively balanced across genres rather than being dominated by a few. Having a balanced distribution is crucial for conducting fair analysis and predictive modeling since it reduces the risk of bias toward a specific genre. 
@@ -83,7 +83,7 @@ We then examined the distribution of danceability scores.
 <iframe
   src="assets/danceability_distribution.html"
   width="900"
-  height="600"
+  height="400"
   frameborder="0">
 </iframe>
 We observed that most songs have moderate-to-high danceability scores, indicating that Spotify tracks in this dataset tend to have rhythmically engaging music. 
@@ -95,7 +95,7 @@ Lastly, we examined the distribution of explicit and non-explicit tracks.
 <iframe
   src="assets/explicit_distribution.html"
   width="900"
-  height="600"
+  height="400"
   frameborder="0">
 </iframe>
 This chart reveals a significant difference between explicit and non-explicit tracks in the dataset. It appears that Non-explicit songs make up the vast majority of tracks, with over 100,000 entries, while explicit songs account for only a much smaller portion of the dataset. This suggests that mainstream music in the dataset is still largely dominated by non-explicit content. This imbalance may also affect later analysis or predictive modeling, where patterns associated with non-explicit tracks could have a stronger influence on the model due to their much larger representation in the dataset.
@@ -109,7 +109,7 @@ First, we examined the relationship between danceability and popularity.
 <iframe
   src="assets/danceability_popularity.html"
   width="900"
-  height="600"
+  height="400"
   frameborder="0">
 </iframe>
 The relationship between danceability and popularity does not appear strongly linear. However, highly popular songs are more frequently observed among tracks with moderate-to-high danceability scores, suggesting that danceability may contribute to a track's success, although it is unlikely to be the sole factor influencing popularity.
@@ -119,7 +119,7 @@ Next, we compared popularity distributions between explicit and non-explicit tra
 <iframe
   src="assets/explicit_popularity.html"
   width="900"
-  height="600"
+  height="400"
   frameborder="0">
 </iframe>
 Interestingly, although non-explicit tracks make up the majority of the dataset, explicit tracks appear to have a slightly higher median popularity. This may suggest that explicit content is relatively common among more popular or commercially successful tracks. However, both groups still show a wide spread in popularity, indicating that explicitness alone is not enough to determine whether a song becomes popular.
