@@ -45,6 +45,7 @@ To focus on our research question, we kept only the relevant columns described a
 5. Finally, after examining the distribution of Spotify popularity scores, we created a binary target variable, `is_popular`, where tracks with a popularity score of 55 or greater were labeled as popular and tracks below 55 were labeled as not popular. This transformed the problem into a classification task for our predictive modeling.
 
 Below is the head of our cleaned DataFrame.
+
 | track_id               |   popularity | track_genre   |   danceability |   energy |   loudness |   speechiness |   acousticness |   instrumentalness |   liveness |   valence |   tempo | explicit   | artists                |   duration_ms | release_date        |   release_year |   duration_min |   num_artists | is_popular   |
 |:-----------------------|-------------:|:--------------|---------------:|---------:|-----------:|--------------:|---------------:|-------------------:|-----------:|----------:|--------:|:-----------|:-----------------------|--------------:|:--------------------|---------------:|---------------:|--------------:|:-------------|
 | 5SuOikwiRyPMVoIQDJUgSV |           73 | acoustic      |          0.676 |   0.461  |     -6.746 |        0.143  |         0.0322 |           1.01e-06 |     0.358  |     0.715 |  87.917 | False      | Gen Hoshino            |        230666 | 1974-01-01 00:00:00 |           1974 |           3.84 |             1 | True         |
