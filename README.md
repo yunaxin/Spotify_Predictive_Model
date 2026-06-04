@@ -242,6 +242,11 @@ Before selecting features, we evaluated each one using three methods:
 ></iframe>
 
 
+The confusion matrix above shows how our final model performed on the 1,200 test tracks. Out of 457 truly popular tracks, the model correctly identified 317 (69.1% recall) while missing 140. Out of 743 truly non-popular tracks, the model correctly classified 667 (89.8%) while falsely labeling 76 as popular.
+
+The model performs significantly better at identifying non-popular tracks than popular ones. This is expected given the class imbalance, with only 25% of tracks labeled popular, the model has seen fewer examples of what makes a track popular during training. Despite this challenge, an F1 score of 0.745 suggests the model has learned meaningful patterns from audio features, genre, and metadata to distinguish popular from non-popular tracks.
+
+
 ### Engineered Features
 We engineered three new features on top of the baseline:
 
