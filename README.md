@@ -11,29 +11,21 @@ Our main data science question is: Can we predict whether a Spotify track become
 
 ## Relevant Columns
 
-**`popularity`**: Spotify’s popularity score for each track, ranging from 0 to 100. Higher values indicate higher popularity.
+| Column             | Type              | Description                                                                           | Why It Matters                                                                        |
+| ------------------ | ----------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `popularity`       | Numeric           | Spotify popularity score from 0 to 100. Higher values mean the track is more popular. | Used as the original popularity measure and to create the prediction target.          |
+| `is_popular`       | Binary / derived  | `True` if a track’s popularity score is at least 55, otherwise `False`.               | This is the response variable for the classification model.                           |
+| `track_genre`      | Categorical       | Genre label assigned to each track.                                                   | Used to compare popularity patterns across genres and as a model feature.             |
+| `danceability`     | Numeric           | Measures how suitable a track is for dancing, from 0 to 1.                            | Helps capture rhythm and beat-related qualities of a song.                            |
+| `energy`           | Numeric           | Measures the intensity and activity of a track, from 0 to 1.                          | Useful for understanding whether more energetic tracks are more likely to be popular. |
+| `valence`          | Numeric           | Measures the musical positivity of a track, from 0 to 1.                              | Helps capture whether happier-sounding tracks differ in popularity.                   |
+| `acousticness`     | Numeric           | Measures how likely a track is to be acoustic, from 0 to 1.                           | Useful for comparing acoustic versus more electronically produced tracks.             |
+| `instrumentalness` | Numeric           | Estimates whether a track contains no vocals, from 0 to 1.                            | Helps distinguish instrumental tracks from vocal-heavy tracks.                        |
+| `loudness`         | Numeric           | Overall loudness of the track in decibels.                                            | Captures intensity and production style.                                              |
+| `tempo`            | Numeric           | Estimated beats per minute of the track.                                              | Represents song speed and is also used in the missingness analysis.                   |
+| `duration_min`     | Numeric / derived | Track duration converted from milliseconds to minutes.                                | Easier to interpret than `duration_ms` and useful for analyzing song length.          |
+| `explicit`         | Boolean           | Indicates whether the track contains explicit content.                                | Can help test whether explicit tracks differ in popularity.                           |
 
-**`is_popular`**: A derived binary column. Tracks with popularity scores of at least 55 are labeled as popular.
-
-**`track_genre`**: The genre label for each track. This is used to compare popularity and audio patterns across genres.
-
-**`danceability`**: A score from 0 to 1 that measures how suitable a track is for dancing.
-
-**`energy`**: A score from 0 to 1 that measures the intensity and activity of a track.
-
-**`valence`**: A score from 0 to 1 that measures how positive or cheerful a track sounds.
-
-**`acousticness`**: A score from 0 to 1 that measures how likely a track is to be acoustic.
-
-**`instrumentalness`**: A score from 0 to 1 that estimates whether a track contains no vocals.
-
-**`loudness`**: The overall loudness of the track in decibels.
-
-**`tempo`**: The estimated beats per minute of the track.
-
-**`duration_min`**: A derived column showing the track length in minutes.
-
-**`explicit`**: A Boolean column indicating whether the track contains explicit content.
 
 
 ## Framing a Prediction Problem
