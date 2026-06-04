@@ -191,6 +191,17 @@ To further validate our findings, we also explored the relationship between temp
 
 ## Hypothesis Testing 
 
+To investigate whether genre is associated with song popularity, we conducted a hypothesis test comparing the genre distributions of popular and non-popular songs.
+
+**Null Hypothesis**: The distribution of `track_genre` is the same for popular and non-popular songs.
+**Alternative Hypothesis**: The distribution of `track_genre` differs between popular and non-popular songs.
+
+**Test Statistic**: Total Variation Distance (TVD) between the genre distributions of popular and non-popular songs.
+
+**Significance level**: 0.05
+
+The observed TVD (0.479) is substantially larger than the values generated under the null distribution, resulting in a p-value that is effectively 0. Since the p-value is well below our significance level of 0.05, therefore we rejeuct the null hypothesis. This suggests that the distribution of genres differs between popular and non-popular songs and that genre may be an important factor associated with song popularity.
+
 ## Framing a Prediction Problem
 
 The prediction problem is: can we predict whether a Spotify track is popular using its audio features, genre, and track metadata?
