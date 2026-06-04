@@ -10,7 +10,7 @@ We use the Spotify Music Tracks dataset, which contains 114,000 rows and 22 colu
 Our main data science question is: **Can we predict whether a Spotify track becomes popular using its audio features and genre?** 
 This question is relevant because music platforms, artists, and playlist curators often rely on data to understand listener behavior and identify patterns behind successful songs. While popularity is influenced by many outside factors that are not captured in this dataset, the available audio features still give us a way to study whether certain types of songs are more likely to perform well.
 
-We focus on the following columns that are relevant to our analysis:
+The dataset contains many variables; however, our analysis focuses on the following columns:
 
 | Column | Description |
 |----------|-------------|
