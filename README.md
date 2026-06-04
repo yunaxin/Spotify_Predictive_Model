@@ -95,7 +95,10 @@ However, many of the differences between the two groups remain relatively small,
 
 ### NMAR Analysis
 
+We believe the missing values in the `tempo` column are unlikely to be Not Missing At Random (NMAR). Instead, the missingness may be related to limitations in Spotify's audio analysis process or metadata collection. Since the reason a tempo value is missing is likely associated with factors other than the tempo itself, the missingness may be Missing At Random (MAR) rather than NMAR. 
+
 ### Missingness Dependency
+
 
 ## Hypothesis Testing 
 
