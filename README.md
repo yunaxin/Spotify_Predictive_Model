@@ -29,6 +29,16 @@ The dataset contains many variables; however, our analysis focuses on the follow
 | `duration_ms` | Duration of the track in milliseconds. |
 | `release_date` | Release date of the track. |
 
+## Data Cleaning and Exploratory Data Analysis
+
+### Data Cleaning 
+
+To focus on our research question, we kept only the columns described above and removed the remaining columns from the dataset.
+
+Next, we converted the `release_date` column to a datetime format and extracted the release year into a new column, `release_year`, which allows us to analyze how a track's release period may relate to its popularity. We also checked the dataset for missing values and duplicate observations to ensure the data was consistent and suitable for exploratory analysis and predictive modeling.
+
+Below is the head of our cleaned DataFrame.
+
 
 
 ## Framing a Prediction Problem
