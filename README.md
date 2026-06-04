@@ -259,7 +259,10 @@ Before selecting features, we evaluated each one using three methods:
   frameborder="0"
 ></iframe>
 
-3. Permutation Importance — measures how much the model's F1 score drops when a feature is shuffled. track_genre (0.278) was by far the most important feature, followed by release_year (0.044). Every feature had positive permutation importance, confirming all features contributed to the model.
+Not all features relate to popularity in the same way. Features like `release_year`, `loudness`, and `energy` show positive correlations, songs that are louder, more energetic, or more recently released tend to score higher in popularity. On the other side, `instrumentalness` and `acousticness` are negatively correlated, songs that are heavily instrumental or acoustic (think classical or folk) tend to be less popular on Spotify's mainstream charts. It's worth noting that correlation only captures linear relationships, so some features may still be useful even if their correlation looks small.
+
+
+2. Permutation Importance — measures how much the model's F1 score drops when a feature is shuffled. track_genre (0.278) was by far the most important feature, followed by release_year (0.044). Every feature had positive permutation importance, confirming all features contributed to the model.
 
 <iframe
   src="assets/permutation_importance.html"
@@ -268,7 +271,10 @@ Before selecting features, we evaluated each one using three methods:
   frameborder="0"
 ></iframe>
 
-4. Ablation Testing — removing any single feature dropped model accuracy, even features with low correlation like num_artists (-0.038). This confirms that Random Forest captures non-linear patterns that correlation alone misses.
+To get a fuller picture of which features actually matter to our model, we used permutation importance by shuffling each feature one at a time and measuring how much the F1 score drops. `track_genre` stands out as the single most important feature by a wide margin, which makes sense given how dramatically popularity varies across genres (pop at 64% vs classical at 4.9%). `release_year` and `acousticness` follow as the next most impactful. Even features like `num_artists` that showed weak linear correlation still contributed positively, a reminder that tree-based models can pick up on patterns that simple correlation misses.
+
+
+3. Ablation Testing — removing any single feature dropped model accuracy, even features with low correlation like num_artists (-0.038). This confirms that Random Forest captures non-linear patterns that correlation alone misses.
 
 ### Engineered Features
 We engineered three new features on top of the baseline:
