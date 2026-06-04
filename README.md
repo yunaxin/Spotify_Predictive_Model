@@ -250,7 +250,7 @@ For the final model, we plan to improve performance by adding more Spotify audio
 ### Feature Selection
 Before selecting features, we evaluated each one using three methods:
 
-1. Correlation — release_year (0.295), loudness (0.251), and energy (0.241) had the strongest positive correlations with popularity. instrumentalness (-0.209) and acousticness (-0.199) had the strongest negative correlations, highly instrumental or acoustic songs tend to be less popular on Spotify, which is dominated by vocal-heavy genres like pop and hip-hop.
+1. **Correlation** — measures the linear relationship between each feature and popularity.
 
 <iframe
   src="assets/feature_correlation.html"
@@ -262,7 +262,7 @@ Before selecting features, we evaluated each one using three methods:
 Not all features relate to popularity in the same way. Features like `release_year`, `loudness`, and `energy` show positive correlations, songs that are louder, more energetic, or more recently released tend to score higher in popularity. On the other side, `instrumentalness` and `acousticness` are negatively correlated, songs that are heavily instrumental or acoustic (think classical or folk) tend to be less popular on Spotify's mainstream charts. It's worth noting that correlation only captures linear relationships, so some features may still be useful even if their correlation looks small.
 
 
-2. Permutation Importance — measures how much the model's F1 score drops when a feature is shuffled. track_genre (0.278) was by far the most important feature, followed by release_year (0.044). Every feature had positive permutation importance, confirming all features contributed to the model.
+2. **Permutation Importance** — measures how much the model's F1 score drops when a feature is shuffled.
 
 <iframe
   src="assets/permutation_importance.html"
