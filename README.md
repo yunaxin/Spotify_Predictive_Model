@@ -25,7 +25,7 @@ The dataset contains many variables; however, our analysis focuses on the follow
 | `liveness` | Estimates the probability that the track was recorded with a live audience (0–1). |
 | `valence` | Measures the musical positivity of a track, where higher values indicate happier or more cheerful sounds (0–1). |
 | `tempo` | Estimated tempo of the track in beats per minute (BPM). |
-| `explicit` | Indicates whether the track contains explicit content. (True = explicit, False = not explicit).|
+| `explicit` | Indicates whether the track contains explicit content (True = explicit, False = not explicit).|
 | `artists` | Name(s) of the artist(s). |
 | `duration_ms` | Duration of the track in milliseconds. |
 | `release_date` | Release date of the track. |
