@@ -145,7 +145,7 @@ However, many of the differences between the two groups remain relatively small,
 
 We believe the missing values in the `tempo` column are unlikely to be Not Missing At Random (NMAR). Instead, the missingness may be related to limitations in Spotify's audio analysis process or metadata collection rather than the tempo value itself.
 
-If additional information were available about how Spotify computes audio features, whether a track failed audio processing, or why certain metadata could not be extracted, this information could help explain why tempo values are missing. Since the missingness is likely associated with factors other than the tempo itself, we believe the missingness mechanism is more consistent with **Missing At Random (MAR)** than **NMAR**.
+If additional information were available about how Spotify computes audio features, whether a track failed audio processing, or why certain metadata could not be extracted, this information could help explain why tempo values are missing. Since the missingness is likely associated with factors other than the tempo itself, we believe the missingness mechanism is more consistent with Missing At Random (MAR) than NMAR.
 
 ### Missingness Dependency
 
@@ -172,7 +172,7 @@ After performing the permutation test, we obtained a p-value of 0.0. Since the p
 
 #### Test 2: Release Year and Tempo
 
-**Null Hypothesis**: The missingness of `tempo` does not depend on a track's `release_year`. 
+**Null Hypothesis**: The missingness of `tempo` does not depend on a track's `release_year`. <br>
 **Alternative Hypothesis**: The missingness of `tempo` depends on a track's `release_year`. 
 
 **Test Statistic**: Absolute Difference in the mean `release_year` between tracks with missing `tempo` values and tracks with non-missing `tempo` values. 
