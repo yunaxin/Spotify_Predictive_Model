@@ -99,6 +99,27 @@ We believe the missing values in the `tempo` column are unlikely to be Not Missi
 
 ### Missingness Dependency
 
+We next examined the missingness of the `tempo` column by testing whether its missingness depends on other variables in the dataset. Specifically, we investigated whether the missingness of tempo depends on `track_genre` or `release_year`.
+
+To conduct these tests, we created a Boolean indicator column, `tempo_missing`, which records whether the `tempo` value is missing for each track. 
+
+Test 1: Track Genre and Tempo
+
+**Null Hypothesis**: The missingness of `tempo` does not depend on `track_genre`.  
+**Alternative Hypothesis**: The missingness of `tempo` depends on `track_genre`. 
+
+**Test Statistic**: Total Variation Distance (TVD)  between the distribution of genres for tracks with missing tempo values and the distribution of genres for tracks with non-missing tempo values.
+
+**Significance level**: 0.05
+
+Test 2: Release Year and Tempo
+
+**Null Hypothesis**: The missingness of `tempo` does not depend on a track's `release_year`. 
+**Alternative Hypothesis**: The missingness of `tempo` depends on a track's `release_year`. 
+
+**Test Statistic**: Absolute Difference in the mean `release_year` between tracks with missing `tempo` values and tracks with non-missing `tempo` values. 
+
+**Significance level**: 0.05
 
 ## Hypothesis Testing 
 
