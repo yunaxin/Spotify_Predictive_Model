@@ -71,6 +71,17 @@ This chart reveals a significant difference between explicit and non-explicit tr
 
 ## Bivariate Analysis
 
+To better understand factors associated with popularity, we examined the relationships between popularity and two track characteristics: danceability and explicit status.
+
+First, we examined the relationship between danceability and popularity. 
+
+The relationship between danceability and popularity does not appear strongly linear. However, highly popular songs are more frequently observed among tracks with moderate-to-high danceability scores, suggesting that danceability may contribute to a track's success, although it is unlikely to be the sole factor influencing popularity.
+
+Next, we compared popularity distributions between explicit and non-explicit tracks.
+
+Interestingly, although non-explicit tracks make up the majority of the dataset, explicit tracks appear to have a slightly higher median popularity. This may suggest that explicit content is relatively common among more popular or commercially successful tracks. However, both groups still show a wide spread in popularity, indicating that explicitness alone is not enough to determine whether a song becomes popular.
+
+## Interesting Aggregates 
 
 
 ## Framing a Prediction Problem
