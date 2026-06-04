@@ -69,7 +69,7 @@ Lastly, we examined the distribution of explicit and non-explicit tracks.
 
 This chart reveals a significant difference between explicit and non-explicit tracks in the dataset. It appears that Non-explicit songs make up the vast majority of tracks, with over 100,000 entries, while explicit songs account for only a much smaller portion of the dataset. This suggests that mainstream music in the dataset is still largely dominated by non-explicit content. This imbalance may also affect later analysis or predictive modeling, where patterns associated with non-explicit tracks could have a stronger influence on the model due to their much larger representation in the dataset.
 
-## Bivariate Analysis
+### Bivariate Analysis
 
 To better understand factors associated with popularity, we examined the relationships between popularity and two track characteristics: danceability and explicit status.
 
@@ -81,7 +81,14 @@ Next, we compared popularity distributions between explicit and non-explicit tra
 
 Interestingly, although non-explicit tracks make up the majority of the dataset, explicit tracks appear to have a slightly higher median popularity. This may suggest that explicit content is relatively common among more popular or commercially successful tracks. However, both groups still show a wide spread in popularity, indicating that explicitness alone is not enough to determine whether a song becomes popular.
 
-## Interesting Aggregates 
+### Interesting Aggregates 
+
+We also look at how audio features differ between popular and non-popular songs
+
+
+The table above compares the average audio features between popular and non-popular songs. Popular songs tend to have slightly higher average danceability scores and higher loudness values, suggesting that more rhythmically engaging and louder tracks may perform better on Spotify. Popular songs also show lower average acousticness and instrumentalness, indicating that mainstream songs in the dataset are generally less acoustic and more vocal-focused.
+
+However, many of the differences between the two groups remain relatively small, especially for features such as energy, speechiness, and valence. This suggests that no single audio feature alone strongly determines popularity, and that song popularity is likely influenced by a combination of multiple audio characteristics and genre.
 
 
 ## Framing a Prediction Problem
