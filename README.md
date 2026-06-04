@@ -91,6 +91,14 @@ The table above compares the average audio features between popular and non-popu
 However, many of the differences between the two groups remain relatively small, especially for features such as energy, speechiness, and valence. This suggests that no single audio feature alone strongly determines popularity, and that song popularity is likely influenced by a combination of multiple audio characteristics and genre.
 
 
+## Assessment of Missingness
+
+### NMAR Analysis
+
+### Missingness Dependency
+
+## Hypothesis Testing 
+
 ## Framing a Prediction Problem
 
 The prediction problem is: can we predict whether a Spotify track is popular using its audio features and metadata?
