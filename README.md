@@ -164,3 +164,13 @@ The model was trained on 80% of the data and evaluated on the remaining 20% test
 The baseline model provides a reasonable starting point, but there is still room for improvement. In particular, the recall score shows that the model only identifies about 58% of popular tracks. This suggests that using only `danceability` and `track_genre` is not enough to fully capture the patterns behind track popularity.
 
 For the final model, we plan to improve performance by adding more Spotify audio features, such as `energy`, `valence`, `acousticness`, `loudness`, `tempo`, and other track-level audio characteristics. We also plan to tune model hyperparameters to better capture more complex relationships between audio features, genre, and popularity.
+
+## Final Model
+### Feature Selection
+Before selecting features, we evaluated each one using three methods:
+
+1. Correlation — release_year (0.295), loudness (0.251), and energy (0.241) had the strongest positive correlations with popularity. instrumentalness (-0.209) and acousticness (-0.199) had the strongest negative correlations, highly instrumental or acoustic songs tend to be less popular on Spotify, which is dominated by vocal-heavy genres like pop and hip-hop.
+
+2. Permutation Importance — measures how much the model's F1 score drops when a feature is shuffled. track_genre (0.278) was by far the most important feature, followed by release_year (0.044). Every feature had positive permutation importance, confirming all features contributed to the model.
+
+3. Ablation Testing — removing any single feature dropped model accuracy, even features with low correlation like num_artists (-0.038). This confirms that Random Forest captures non-linear patterns that correlation alone misses.
