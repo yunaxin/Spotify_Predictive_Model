@@ -35,7 +35,10 @@ The dataset contains many variables; however, our analysis focuses on the follow
 
 To focus on our research question, we kept only the columns described above and removed the remaining columns from the dataset.
 
-Next, we converted the `release_date` column to a datetime format and extracted the release year into a new column, `release_year`, which allows us to analyze how a track's release period may relate to its popularity. We also checked the dataset for missing values and duplicate observations to ensure the data was consistent and suitable for exploratory analysis and predictive modeling.
+1. We start by examining the dataset for missing values. We found that the `tempo` column contained over 22,000 missing values, which could affect analyses involving tempo. Since tempo is an important audio feature, we chose to preserve these missing values for later missingness analysis rather than immediately removing the affected observations.
+2. Next, we converted the `release_date` column to a datetime format and extracted the release year into a new column, `release_year`, which allows us to analyze how a track's release period may relate to its popularity.
+3. We also created a new column by converting `duration_ms` into a more interpretable feature, `duration_min`, which represents track duration in minutes. In addition, we created another new feature, `num_artists`, by counting the number of artists associated with each track, allowing us to investigate whether collaborations are related to popularity.
+4. Finally, after examining the distribution of Spotify popularity scores, we created a binary target variable, `is_popular`, where tracks with a popularity score of 55 or greater were labeled as popular and tracks below 55 were labeled as not popular. This transformed the problem into a classification task for our predictive modeling
 
 Below is the head of our cleaned DataFrame.
 
