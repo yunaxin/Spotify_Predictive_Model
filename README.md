@@ -1,5 +1,6 @@
 # Spotify Track Popularity Prediction
 #### **Using audio features and genre to classify popular songs**
+**By Anh Tran and Amelia Oo**
 
 ## Introduction
 
