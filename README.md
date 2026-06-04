@@ -1,5 +1,5 @@
 # Spotify Track Popularity Prediction
-### *Using audio features and genre to classify popular songs*
+### Using audio features and genre to classify popular songs
 
 ## Introduction
 
