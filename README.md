@@ -136,3 +136,31 @@ This is a binary classification problem. The response variable is `is_popular`, 
 At the time of prediction, all audio features, genre, and metadata (duration, explicit status, release year, number of artists) are known properties of the track itself, not outcomes that happen after release.
 
 We chose F1 score as our evaluation metric instead of accuracy because the dataset is imbalanced, which only about 25% of tracks are popular. A model could achieve high accuracy by simply predicting "not popular" for every track. F1 balances precision and recall, giving a more honest measure of how well the model identifies popular tracks.
+
+## Baseline Model
+
+For the baseline model, we used a `RandomForestClassifier` inside a single `sklearn Pipeline`. The goal of this baseline was to establish an initial performance benchmark using a small set of features before adding more complexity in the final model.
+
+### Features Used
+
+The baseline model used two features:
+
+| Feature | Type | Encoding / Processing |
+|---|---|---|
+| `danceability` | Quantitative | Scaled using `StandardScaler` |
+| `track_genre` | Nominal | Encoded using `OneHotEncoder` |
+
+The model was trained on 80% of the data and evaluated on the remaining 20% test set.
+
+### Baseline Model Performance
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 0.739 |
+| Precision | 0.686 |
+| Recall | 0.582 |
+| F1-score | 0.630 |
+
+The baseline model provides a reasonable starting point, but there is still room for improvement. In particular, the recall score shows that the model only identifies about 58% of popular tracks. This suggests that using only `danceability` and `track_genre` is not enough to fully capture the patterns behind track popularity.
+
+For the final model, we plan to improve performance by adding more Spotify audio features, such as `energy`, `valence`, `acousticness`, `loudness`, `tempo`, and other track-level audio characteristics. We also plan to tune model hyperparameters to better capture more complex relationships between audio features, genre, and popularity.
