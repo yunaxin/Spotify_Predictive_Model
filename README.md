@@ -32,7 +32,7 @@ Our main data science question is: Can we predict whether a Spotify track become
 
 The prediction problem is: can we predict whether a Spotify track is popular using its audio features and metadata?
 
-This is a binary classification problem. The response variable is is_popular, a column we created by thresholding the popularity score at 50, tracks with a score of 50 or above are labeled popular (1), and the rest are labeled not popular (0). We chose this threshold because it labels the top 25% of tracks as popular, giving a reasonable class balance.
+This is a binary classification problem. The response variable is `is_popular`, a column we created by thresholding the popularity score at 50, tracks with a score of 50 or above are labeled popular (1), and the rest are labeled not popular (0). We chose this threshold because it labels the top 25% of tracks as popular, giving a reasonable class balance.
 
 We chose F1 score as our evaluation metric instead of accuracy because the dataset is imbalanced which is only about 25% of tracks are popular. A model could achieve high accuracy by simply predicting "not popular" for every track, which is not useful. F1 balances precision and recall, giving a more honest measure of how well the model identifies popular tracks.
 
