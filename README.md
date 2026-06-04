@@ -7,7 +7,7 @@ Music popularity is difficult to explain with one simple factor. A song may beco
 
 We use the Spotify Music Tracks dataset, which contains 114,000 tracks and 22 columns. Each row represents one track and includes information such as the artist name, album name, release date, duration, explicit status, genre, and Spotify popularity score. The dataset also includes audio features such as danceability, energy, valence, acousticness, instrumentalness, loudness, speechiness, liveness, and tempo. These variables allow us to compare songs not only by genre or popularity, but also by musical characteristics.
 
-Our main data science question is: Can we predict whether a Spotify track becomes popular using its audio features and genre? This question is relevant because music platforms, artists, and playlist curators often rely on data to understand listener behavior and identify patterns behind successful songs. While popularity is influenced by many outside factors that are not captured in this dataset, the available audio features still give us a way to study whether certain types of songs are more likely to perform well.
+Our main data science question is: **Can we predict whether a Spotify track becomes popular using its audio features and genre?** This question is relevant because music platforms, artists, and playlist curators often rely on data to understand listener behavior and identify patterns behind successful songs. While popularity is influenced by many outside factors that are not captured in this dataset, the available audio features still give us a way to study whether certain types of songs are more likely to perform well.
 
 ## Relevant Columns
 
