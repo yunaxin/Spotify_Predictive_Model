@@ -19,7 +19,7 @@ We focus on the following columns that are relevant to our analysis:
 | `danceability` | Measures how suitable a track is for dancing based on tempo, rhythm stability, and beat strength (0–1). |
 | `energy` | Measures the perceptual intensity and activity level of a track (0–1). |
 | `loudness` | Measures the overall loudness of a track in decibels (dB). |
-| 'speechiness` | Measures the presence of spoken words within a track. |
+| `speechiness` | Measures the presence of spoken words within a track. |
 | `acousticness` | Estimates the confidence that the track is acoustic rather than electronically produced (0–1). |
 | `instrumentalness` | Estimates the probability that the track contains little to no vocals (0–1). |
 | `liveness` | Estimates the probability that the track was recorded with a live audience (0–1). |
