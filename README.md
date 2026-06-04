@@ -177,6 +177,12 @@ After performing the permutation test, we obtained a p-value of 0.0. Since the p
 
 **Significance level**: 0.05
 
+<iframe
+  src="assets/permutation_test_2.html"
+  width="900"
+  height="400"
+  frameborder="0">
+</iframe>
 After performing the permutation test, we obtained a p-value of 0.0. Since the p-value is less than 0.05, we reject the null hypothesis. This suggests that the missingness of `tempo` does depend on `release_year`.
 
 ## Hypothesis Testing 
