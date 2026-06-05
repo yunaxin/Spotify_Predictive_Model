@@ -48,13 +48,14 @@ To focus on our research question, we kept only the relevant columns described a
 After filtering the selected genres and engineering additional features, the final dataset consisted of **6,000** tracks and **19** variables. This dataset was used throughout our exploratory analysis and predictive modeling process.
 
 Below is the head of our cleaned DataFrame. 
-| track_id               |   popularity | track_genre   |   danceability |   acousticness |   release_year |   valence |   tempo | explicit   | is_popular   |
-|:-----------------------|-------------:|:--------------|---------------:|---------------:|---------------:|----------:|--------:|:-----------|:-------------|
-| 7wrYBASu0OoxoDErd4Edxd |           58 | classical     |          0.643 |          0.593 |           2001 |     0.62  | nan     | False      | True         |
-| 72HdutlIHBZJ7WT1xVAAZT |           59 | classical     |          0.484 |          0.365 |           2005 |     0.68  | nan     | False      | True         |
-| 7JGgKHHDgJCJkQCQxyHHdl |           54 | classical     |          0.608 |          0.581 |           1984 |     0.439 | 140.109 | False      | False        |
-| 3YRj4jmwois2ctPnhwSwFo |           68 | classical     |          0.695 |          0.596 |           1972 |     0.637 | nan     | False      | True         |
-| 3tp3ij9dtY3CacQgd1OvRf |           59 | classical     |          0.583 |          0.581 |           1987 |     0.241 | 118.226 | False      | True         |
+
+| track_id               |   popularity | track_genre   |   danceability |   acousticness |   release_year |   tempo | explicit   | is_popular   |
+|:-----------------------|-------------:|:--------------|---------------:|---------------:|---------------:|--------:|:-----------|:-------------|
+| 7wrYBASu0OoxoDErd4Edxd |           58 | classical     |          0.643 |          0.593 |           2001 | nan     | False      | True         |
+| 72HdutlIHBZJ7WT1xVAAZT |           59 | classical     |          0.484 |          0.365 |           2005 | nan     | False      | True         |
+| 7JGgKHHDgJCJkQCQxyHHdl |           54 | classical     |          0.608 |          0.581 |           1984 | 140.109 | False      | False        |
+| 3YRj4jmwois2ctPnhwSwFo |           68 | classical     |          0.695 |          0.596 |           1972 | nan     | False      | True         |
+| 3tp3ij9dtY3CacQgd1OvRf |           59 | classical     |          0.583 |          0.581 |           1987 | 118.226 | False      | True         |
 
 Note: For readability, only a subset of the columns most relevant to our analysis is shown.
 
