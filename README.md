@@ -69,16 +69,6 @@ First, we explored the distribution of Spotify popularity scores.
 The histogram above shows a right-skewed distribution, with most tracks receiving relatively low to moderate popularity scores and fewer tracks achieving very high popularity. This suggests that highly popular songs are less common in the dataset, which may make popularity prediction more challenging since there are fewer examples of highly popular tracks for the model to learn from.
 
 
-Next, we looked at the most common genres.
-
-<iframe
-  src="assets/top_genres.html"
-  width="900"
-  height="400"
-  frameborder="0">
-</iframe>
-This barchart above shows the top 10 most common genres in the dataset. The frequences of these genres appear to be very similar, with each genre containing close to 1000 tracks. This suggests that the dataset is relatively balanced across genres rather than being dominated by a few. Having a balanced distribution is crucial for conducting fair analysis and predictive modeling since it reduces the risk of bias toward a specific genre. 
-
 We then examined the distribution of danceability scores. 
 
 <iframe
