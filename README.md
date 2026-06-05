@@ -325,3 +325,29 @@ The confusion matrix above shows how our final model performed on the 1,200 test
 
 The model performs significantly better at identifying non-popular tracks than popular ones. This is expected given the class imbalance, with only 25% of tracks labeled popular, the model has seen fewer examples of what makes a track popular during training. Despite this challenge, an F1 score of 0.745 suggests the model has learned meaningful patterns from audio features, genre, and metadata to distinguish popular from non-popular tracks.
 
+## Fairness Analysis
+
+We investigated whether our model performs equally well across different genre groups. Specifically, we asked: does our model perform worse for lower-popularity genres (classical, country) compared to higher-popularity genres (electronic, hip-hop, metal, pop)?
+
+**Groups**:
+Group X: Lower-popularity genres — classical, country
+Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
+
+**Evaluation metric** : F1 score
+
+**Null hypothesis**: The model is fair. Its F1 score for lower-popularity and higher-popularity genres are roughly the same, and any differences are due to random chance.
+**Alternative hypothesis** : The model is unfair. Its F1 score for lower-popularity genres is lower than for higher-popularity genres.
+**Test statistic** : Difference in F1 scores (lower genres minus higher genres)
+**Significance level**: 0.05
+
+**Results**: The observed difference in F1 scores was -0.681. After running 1000 permutation trials, the p-value was 0.0. Since 0.0 < 0.05, we reject the null hypothesis.
+
+<iframe
+  src="assets/fairness_permutation.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+The plot above shows that the observed difference of -0.681 falls far outside the distribution of simulated differences, confirming that this result is not due to random chance. Our model performs significantly worse on classical and country tracks than on pop, hip-hop, metal, and electronic tracks. This is likely due to class imbalance — lower-popularity genres have very few popular tracks in the training data (classical at 4.9%, country at 15.7%), making it harder for the model to learn what makes them popular compared to genres like pop (64.4%).
+
