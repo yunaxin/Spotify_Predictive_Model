@@ -184,7 +184,7 @@ To further validate our findings, we also explored the relationship between temp
 
 ## Hypothesis Testing 
 
-To investigate whether genre is associated with song popularity, we conducted a hypothesis test comparing the genre distributions of popular and non-popular songs.
+To investigate whether genre is associated with song popularity, we conducted a permutation test comparing the genre distributions of popular and non-popular songs.
 
 **Null Hypothesis**: The distribution of `track_genre` is the same for popular and non-popular songs. <br>
 **Alternative Hypothesis**: The distribution of `track_genre` differs between popular and non-popular songs.
@@ -202,7 +202,9 @@ To investigate whether genre is associated with song popularity, we conducted a 
   frameborder="0">
 </iframe>
 
-The observed TVD (0.479) is substantially larger than the values generated under the null distribution, resulting in a p-value that is effectively 0. Since the p-value is well below our significance level of 0.05, therefore we rejeuct the null hypothesis. This suggests that the distribution of genres differs between popular and non-popular songs and that genre may be an important factor associated with song popularity.
+We chose a permutation test because we wanted to determine whether the observed association between genre and popularity could have occurred by chance. Under the null hypothesis, popularity labels are independent of genre, so randomly permuting the popularity labels simulates what we would expect to see if no relationship existed. We used TVD as our test statistic because it measures the overall difference between two categorical distributions and is therefore well-suited for comparing genre proportions across groups.
+
+The observed TVD (0.479) is substantially larger than the values generated under the null distribution, resulting in a p-value that is effectively 0. Since the p-value is well below our significance level of 0.05, we rejeuct the null hypothesis. This suggests that the distribution of genres differs between popular and non-popular songs and that genre may be an important factor associated with song popularity in our dataset. 
 
 ## Framing a Prediction Problem
 
