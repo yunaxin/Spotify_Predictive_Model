@@ -1,26 +1,4 @@
-# macOS
-.DS_Store
-
-# Python
 __pycache__/
-*.pyc
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Virtual environments
-venv/
-.venv/
-env/
-
-# GitHub Pages
-_site/
-
-# Ignore dataset
 data/
-
-# Secrets
-.env
-
-# Misc
-*.log
+dsc80_utils.py
+.DS_Store
