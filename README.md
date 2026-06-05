@@ -365,12 +365,14 @@ Group Y: Non-explicit tracks (explicit=False)
 **Significance level** : 0.05
 
 **Results** : The observed difference in F1 scores was -0.017. After running 1000 permutation trials, the p-value was 0.407. Since 0.407 > 0.05, we fail to reject the null hypothesis. The observed statistic falls well within the simulated distribution, suggesting the model performs roughly equally for explicit and non-explicit tracks — any difference is likely due to random chance.
-
 <iframe
   src="assets/fairness_explicit.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+The plot above shows the distribution of simulated F1 score differences across 1000 permutation trials. The dashed line represents our observed difference of -0.017, which falls well within the center of the simulated distribution. This visually confirms that the difference between explicit and non-explicit tracks is well within what we'd expect by random chance — supporting our conclusion that the model is fair across these two groups.
+
 
 
