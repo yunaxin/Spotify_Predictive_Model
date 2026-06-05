@@ -327,22 +327,20 @@ The model performs significantly better at identifying non-popular tracks than p
 
 ## Fairness Analysis
 
-### Is Our Model Fair Across Explicit and Non-Explicit Tracks?
-We investigated whether our model performs equally well across different genre groups. Specifically, we asked: does our model perform worse for lower-popularity genres (classical, country) compared to higher-popularity genres (electronic, hip-hop, metal, pop)?
+### Does Our Model Perform Equally Well Across Genre Groups?
+Our EDA revealed something striking: popularity varies dramatically across genres. Pop tracks are popular 64% of the time, while classical tracks are popular only 4.9% of the time. This raised an important question: if our model was trained on data where some genres are rarely popular, does it struggle to identify popular tracks within those genres?
+To investigate, we split tracks into two groups: lower-popularity genres (classical and country) and higher-popularity genres (electronic, hip-hop, metal, and pop), and tested whether our model performs equally well for both.
 
 **Groups**:
 Group X: Lower-popularity genres — classical, country
 Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
-
 **Evaluation metric** : F1 score
-
 **Null hypothesis**: The model is fair. Its F1 score for lower-popularity and higher-popularity genres are roughly the same, and any differences are due to random chance.
 **Alternative hypothesis** : The model is unfair. Its F1 score for lower-popularity genres is lower than for higher-popularity genres.
 **Test statistic** : Difference in F1 scores (lower genres minus higher genres)
 **Significance level**: 0.05
 
 **Results**: The observed difference in F1 scores was -0.681. After running 1000 permutation trials, the p-value was 0.0. Since 0.0 < 0.05, we reject the null hypothesis.
-
 <iframe
   src="assets/fairness_permutation.html"
   width="800"
@@ -352,5 +350,27 @@ Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
 
 The plot above shows that the observed difference of -0.681 falls far outside the distribution of simulated differences, confirming that this result is not due to random chance. Our model performs significantly worse on classical and country tracks than on pop, hip-hop, metal, and electronic tracks. This is likely due to class imbalance — lower-popularity genres have very few popular tracks in the training data (classical at 4.9%, country at 15.7%), making it harder for the model to learn what makes them popular compared to genres like pop (64.4%).
 
-### "Does Our Model Perform Equally Well Across Genre Groups?"
+
+### Is Our Model Fair Across Explicit and Non-Explicit Tracks?
+Not all songs on Spotify are created equal — some carry an "E" badge indicating explicit content like strong language or adult themes. Since explicit tracks make up a smaller portion of our dataset, we wondered: does our model treat them fairly, or does it struggle to predict their popularity compared to clean tracks?
+To test this, we ran a permutation test comparing the F1 score of our model on explicit tracks vs non-explicit tracks.
+
+**Groups**:
+Group X: Explicit tracks (explicit=True)
+Group Y: Non-explicit tracks (explicit=False)
+
+**Null hypothesis** : The model is fair. Its F1 score for explicit and non-explicit tracks are roughly the same, and any differences are due to random chance.
+**Alternative hypothesis** : The model is unfair. Its F1 score for explicit tracks is lower than for non-explicit tracks.
+**Test statistic** : Difference in F1 scores (explicit minus non-explicit)
+**Significance level** : 0.05
+
+**Results** : The observed difference in F1 scores was -0.017. After running 1000 permutation trials, the p-value was 0.407. Since 0.407 > 0.05, we fail to reject the null hypothesis. The observed statistic falls well within the simulated distribution, suggesting the model performs roughly equally for explicit and non-explicit tracks — any difference is likely due to random chance.
+
+<iframe
+  src="assets/fairness_explicit.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
