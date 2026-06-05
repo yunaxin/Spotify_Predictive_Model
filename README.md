@@ -320,8 +320,7 @@ Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
 
 **Evaluation metric** : F1 score
 
-**Null hypothesis**: The model is fair. Its F1 score for lower-popularity and higher-popularity genres are roughly the same, and any differences are due to random chance.
-
+**Null hypothesis**: The model is fair. Its F1 score for lower-popularity and higher-popularity genres are roughly the same, and any differences are due to random chance.<br>
 **Alternative hypothesis** : The model is unfair. Its F1 score for lower-popularity genres is lower than for higher-popularity genres.
 
 **Test statistic** : Difference in F1 scores (lower genres minus higher genres)
@@ -336,10 +335,10 @@ Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
   frameborder="0"
 ></iframe>
 
-The plot above shows that the observed difference of -0.681 falls far outside the distribution of simulated differences, confirming that this result is not due to random chance (p-value = 0.0). Our model performs significantly worse on classical and country tracks than on pop, hip-hop, metal, and electronic tracks. This is likely due to class imbalance — lower-popularity genres have very few popular tracks in the training data (classical at 4.9%, country at 15.7%), making it harder for the model to learn what makes them popular compared to genres like pop (64.4%).
+The plot above shows that the observed difference of -0.681 falls far outside the distribution of simulated differences, confirming that this result is not due to random chance (p-value = 0.0). Our model performs significantly worse on classical and country tracks than on pop, hip-hop, metal, and electronic tracks. This is likely due to class imbalance: lower-popularity genres have very few popular tracks in the training data (classical at 4.9%, country at 15.7%), making it harder for the model to learn what makes them popular compared to genres like pop (64.4%).
 
 ### Is Our Model Fair Across Explicit and Non-Explicit Tracks?
-Not all songs on Spotify are created equal — some carry an "E" badge indicating explicit content like strong language or adult themes. Since explicit tracks make up a smaller portion of our dataset, we wondered: does our model treat them fairly, or does it struggle to predict their popularity compared to clean tracks?
+Not all songs on Spotify are created equal, some carry an "E" badge indicating explicit content like strong language or adult themes. Since explicit tracks make up a smaller portion of our dataset, we wondered: does our model treat them fairly, or does it struggle to predict their popularity compared to clean tracks?
 To test this, we ran a permutation test comparing the F1 score of our model on explicit tracks vs non-explicit tracks.
 
 **Groups**: <br>
@@ -353,7 +352,7 @@ Group Y: Non-explicit tracks (explicit=False)
 
 **Significance level** : 0.05
 
-**Results** : The observed difference in F1 scores was -0.017. After running 1000 permutation trials, the p-value was 0.407. Since 0.407 > 0.05, we fail to reject the null hypothesis. The observed statistic falls well within the simulated distribution, suggesting the model performs roughly equally for explicit and non-explicit tracks — any difference is likely due to random chance.
+**Results** : The observed difference in F1 scores was -0.017. After running 1000 permutation trials, the p-value was 0.407. Since 0.407 > 0.05, we fail to reject the null hypothesis. The observed statistic falls well within the simulated distribution, suggesting the model performs roughly equally for explicit and non-explicit tracks, any difference is likely due to random chance.
 <iframe
   src="assets/fairness_explicit.html"
   width="800"
@@ -361,7 +360,7 @@ Group Y: Non-explicit tracks (explicit=False)
   frameborder="0"
 ></iframe>
 
-The plot above shows the distribution of simulated F1 score differences across 1000 permutation trials. The dashed line represents our observed difference of -0.017, which falls well within the center of the simulated distribution. This visually confirms that the difference between explicit and non-explicit tracks is well within what we'd expect by random chance (p-value = 0.407) — supporting our conclusion that the model is fair across these two groups.
+The plot above shows the distribution of simulated F1 score differences across 1000 permutation trials. The dashed line represents our observed difference of -0.017, which falls well within the center of the simulated distribution. This visually confirms that the difference between explicit and non-explicit tracks is well within what we'd expect by random chance (p-value = 0.407); supporting our conclusion that the model is fair across these two groups.
 
 ## Conclusion 
 In this project, we built a binary classifier to predict whether a Spotify track is popular using its audio features, genre, and metadata. Starting from a simple baseline model using only `danceability` and `track_genre` (F1: 0.630), we improved performance significantly through feature engineering, adding more audio features, and hyperparameter tuning, reaching a final F1 score of 0.745.
