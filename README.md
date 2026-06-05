@@ -364,7 +364,7 @@ To test this, we ran a permutation test comparing the F1 score of our model on e
 Group X: Explicit tracks (explicit=True)
 Group Y: Non-explicit tracks (explicit=False)
 
-**Null hypothesis** : The model is fair. Its F1 score for explicit and non-explicit tracks are roughly the same, and any differences are due to random chance.
+**Null hypothesis** : The model is fair. Its F1 score for explicit and non-explicit tracks are roughly the same, and any differences are due to random chance. <br>
 **Alternative hypothesis** : The model is unfair. Its F1 score for explicit tracks is lower than for non-explicit tracks.
 
 **Test statistic** : Difference in F1 scores (explicit minus non-explicit)
