@@ -331,8 +331,8 @@ The model performs significantly better at identifying non-popular tracks than p
 Our EDA revealed something striking: popularity varies dramatically across genres. Pop tracks are popular 64% of the time, while classical tracks are popular only 4.9% of the time. This raised an important question: if our model was trained on data where some genres are rarely popular, does it struggle to identify popular tracks within those genres?
 To investigate, we split tracks into two groups: lower-popularity genres (classical and country) and higher-popularity genres (electronic, hip-hop, metal, and pop), and tested whether our model performs equally well for both.
 
-**Groups**:
-Group X: Lower-popularity genres — classical, country
+**Groups**: <br> 
+Group X: Lower-popularity genres — classical, country <br> 
 Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
 
 **Evaluation metric** : F1 score
