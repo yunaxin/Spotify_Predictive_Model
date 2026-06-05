@@ -342,6 +342,7 @@ Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
 **Alternative hypothesis** : The model is unfair. Its F1 score for lower-popularity genres is lower than for higher-popularity genres.
 
 **Test statistic** : Difference in F1 scores (lower genres minus higher genres)
+
 **Significance level**: 0.05
 
 **Results**: The observed difference in F1 scores was -0.681. After running 1000 permutation trials, the p-value was 0.0. Since 0.0 < 0.05, we reject the null hypothesis.
@@ -364,8 +365,11 @@ Group X: Explicit tracks (explicit=True)
 Group Y: Non-explicit tracks (explicit=False)
 
 **Null hypothesis** : The model is fair. Its F1 score for explicit and non-explicit tracks are roughly the same, and any differences are due to random chance.
+
 **Alternative hypothesis** : The model is unfair. Its F1 score for explicit tracks is lower than for non-explicit tracks.
+
 **Test statistic** : Difference in F1 scores (explicit minus non-explicit)
+
 **Significance level** : 0.05
 
 **Results** : The observed difference in F1 scores was -0.017. After running 1000 permutation trials, the p-value was 0.407. Since 0.407 > 0.05, we fail to reject the null hypothesis. The observed statistic falls well within the simulated distribution, suggesting the model performs roughly equally for explicit and non-explicit tracks — any difference is likely due to random chance.
