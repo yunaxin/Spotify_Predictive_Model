@@ -327,6 +327,7 @@ The model performs significantly better at identifying non-popular tracks than p
 
 ## Fairness Analysis
 
+### Is Our Model Fair Across Explicit and Non-Explicit Tracks?
 We investigated whether our model performs equally well across different genre groups. Specifically, we asked: does our model perform worse for lower-popularity genres (classical, country) compared to higher-popularity genres (electronic, hip-hop, metal, pop)?
 
 **Groups**:
@@ -350,4 +351,6 @@ Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
 ></iframe>
 
 The plot above shows that the observed difference of -0.681 falls far outside the distribution of simulated differences, confirming that this result is not due to random chance. Our model performs significantly worse on classical and country tracks than on pop, hip-hop, metal, and electronic tracks. This is likely due to class imbalance — lower-popularity genres have very few popular tracks in the training data (classical at 4.9%, country at 15.7%), making it harder for the model to learn what makes them popular compared to genres like pop (64.4%).
+
+### "Does Our Model Perform Equally Well Across Genre Groups?"
 
