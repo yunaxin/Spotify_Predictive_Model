@@ -42,7 +42,7 @@ To focus on our research question, we kept only the relevant columns described a
 2. Next, we filtered the `track_genre` column to include only six genres: Classical, Hip-Hop, Country, Electronic, Metal, and Pop. The original dataset contains many genre categories, which can make analysis and visualization difficult to interpret. By focusing on a smaller set of representative genres, we were able to perform clearer genre-based comparisons while keeping the scope of the project manageable.
 3. Then, we converted the `release_date` column to a datetime format and extracted the release year into a new column, `release_year`, which allows us to analyze how a track's release period may relate to its popularity.
 4. We also created a new column by converting `duration_ms` into a more interpretable feature, `duration_min`, which represents track duration in minutes. 
-5. Finally, after examining the distribution of Spotify popularity scores, we created a binary target variable, `is_popular`, where tracks with a popularity score of 50 or greater were labeled as popular and tracks below 50 were labeled as not popular. We chose a threshold of 50 because it approximately corresponds to the top 25% of tracks in our dataset. 
+5. Finally, after examining the distribution of Spotify popularity scores, we created a binary target variable, `is_popular`, where tracks with a popularity score of 55 or greater were labeled as popular and tracks below 55 were labeled as not popular. We chose a threshold of 55 because it approximately corresponds to the top 19% of tracks in our dataset. 
 
 Below is the head of our cleaned DataFrame. 
 
