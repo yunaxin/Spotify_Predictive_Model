@@ -375,7 +375,7 @@ Group Y: Non-explicit tracks (explicit=False)
 The plot above shows the distribution of simulated F1 score differences across 1000 permutation trials. The dashed line represents our observed difference of -0.017, which falls well within the center of the simulated distribution. This visually confirms that the difference between explicit and non-explicit tracks is well within what we'd expect by random chance — supporting our conclusion that the model is fair across these two groups.
 
 ## Conclusion 
-In this project, we built a binary classifier to predict whether a Spotify track is popular using its audio features, genre, and metadata. Starting from a simple baseline model using only danceability and track_genre (F1: 0.630), we improved performance significantly through feature engineering, adding more audio features, and hyperparameter tuning, reaching a final F1 score of 0.745.
+In this project, we built a binary classifier to predict whether a Spotify track is popular using its audio features, genre, and metadata. Starting from a simple baseline model using only `danceability` and `track_genre` (F1: 0.630), we improved performance significantly through feature engineering, adding more audio features, and hyperparameter tuning, reaching a final F1 score of 0.745.
 
 Our analysis revealed that `track_genre` is by far the strongest predictor of popularity - pop and hip-hop tracks are dramatically more likely to be popular than classical or country tracks. This finding also surfaced an important limitation: our model performs significantly worse on lower-popularity genres, which is a direct consequence of class imbalance in the training data.
 
