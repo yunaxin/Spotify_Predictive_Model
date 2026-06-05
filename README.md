@@ -352,8 +352,8 @@ The plot above shows that the observed difference of -0.681 falls far outside th
 Not all songs on Spotify are created equal — some carry an "E" badge indicating explicit content like strong language or adult themes. Since explicit tracks make up a smaller portion of our dataset, we wondered: does our model treat them fairly, or does it struggle to predict their popularity compared to clean tracks?
 To test this, we ran a permutation test comparing the F1 score of our model on explicit tracks vs non-explicit tracks.
 
-**Groups**:
-Group X: Explicit tracks (explicit=True)
+**Groups**: <br>
+Group X: Explicit tracks (explicit=True) <br>
 Group Y: Non-explicit tracks (explicit=False)
 
 **Null hypothesis** : The model is fair. Its F1 score for explicit and non-explicit tracks are roughly the same, and any differences are due to random chance. <br>
