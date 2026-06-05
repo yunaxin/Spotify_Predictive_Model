@@ -297,7 +297,7 @@ We engineered three new features on top of the baseline:
 
 ### Hyperparameter Tuning
 
-For the final model, we used `GridSearchCV` with 5-fold cross validation to tune the `RandomForestClassifier`. We tuned: 
+For the final model, we used `GridSearchCV` with 5-fold cross validation to tune the `RandomForestClassifier`. We tuned: <br> 
   • n_estimators — number of trees (too few → underfitting) <br> 
   • max_depth — depth of each tree (too deep → overfitting) <br> 
 
