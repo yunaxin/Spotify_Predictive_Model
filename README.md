@@ -281,8 +281,6 @@ For the final model, we used `GridSearchCV` with 5-fold cross validation to tune
   • n_estimators — number of trees (too few → underfitting) <br> 
   • max_depth — depth of each tree (too deep → overfitting) <br> 
 
-The best parameters were `max_depth=20` and `n_estimators=100`.
-
 The best parameters were `max_depth=20` and `n_estimators=200`.
 
 Our primary evaluation metric is **F1 score** — all model comparisons are based on F1. Additional metrics are included for reference.
