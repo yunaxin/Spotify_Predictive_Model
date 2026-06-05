@@ -334,9 +334,13 @@ To investigate, we split tracks into two groups: lower-popularity genres (classi
 **Groups**:
 Group X: Lower-popularity genres — classical, country
 Group Y: Higher-popularity genres — electronic, hip-hop, metal, pop
+
 **Evaluation metric** : F1 score
+
 **Null hypothesis**: The model is fair. Its F1 score for lower-popularity and higher-popularity genres are roughly the same, and any differences are due to random chance.
+
 **Alternative hypothesis** : The model is unfair. Its F1 score for lower-popularity genres is lower than for higher-popularity genres.
+
 **Test statistic** : Difference in F1 scores (lower genres minus higher genres)
 **Significance level**: 0.05
 
