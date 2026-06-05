@@ -99,8 +99,8 @@ First, we examined how popularity varies across selected music genres included i
 
 <iframe
     src="assets/genre_popularity.html"
-    width="900"
-    height="500"
+    width="800"
+    height="400"
     frameborder="0">
 </iframe>
 
