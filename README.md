@@ -204,7 +204,7 @@ The observed TVD (0.479) is substantially larger than the values generated under
 ## Framing a Prediction Problem
 
 The prediction problem is: **Can we predict whether a Spotify track is popular using its audio features, genre, and track metadata?** <br> 
-This is a binary classification problem. The response variable is `is_popular`, created by thresholding the popularity score at 50, tracks scoring 50 or above are labeled popular (1), and the rest not popular (0). This threshold labels the top 25% of tracks as popular, giving a reasonable class balance.
+This is a binary classification problem. The response variable is `is_popular`, created by thresholding the popularity score at 55, tracks scoring 55 or above are labeled popular (1), and the rest not popular (0). This threshold labels the top 25% of tracks as popular, giving a reasonable class balance.
 
 At the time of prediction, all audio features, genre, and metadata (duration, explicit status, release year, number of artists) are known properties of the track itself, not outcomes that happen after release.
 
