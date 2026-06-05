@@ -239,8 +239,16 @@ The baseline model provides a reasonable starting point, but there is still room
 For the final model, we plan to improve performance by adding more Spotify audio features, such as `energy`, `valence`, `acousticness`, `loudness`, `tempo`, and other track-level audio characteristics. We also plan to tune model hyperparameters to better capture more complex relationships between audio features, genre, and popularity.
 
 ## Final Model
+
+### Engineered Features
+We engineered three new features on top of the baseline:
+
+1. `loudness_energy_ratio` (loudness / energy): captures the relationship between loudness and energy that neither feature alone conveys. A song can be loud but low energy, or high energy but quiet.
+2. `tempo_filled` : filled 22,114 missing tempo values (19.4% of rows) using the genre median rather than the overall median — because a missing tempo in "classical" is likely different from a missing tempo in "hip-hop".
+3. `num_artists` : counts the number of artists on a track by splitting the artists column by semicolons. D
+
 ### Feature Selection
-Before selecting features, we evaluated each one using three methods:
+Before selecting features, we evaluated each one using two methods:
 
 **1. Correlation** — measures the linear relationship between each feature and popularity.
 
@@ -264,28 +272,6 @@ Not all features relate to popularity in the same way. Features like `release_ye
 ></iframe>
 
 To get a fuller picture of which features actually matter to our model, we used permutation importance by shuffling each feature one at a time and measuring how much the F1 score drops. `track_genre` stands out as the single most important feature by a wide margin, which makes sense given how dramatically popularity varies across genres (pop at 64% vs classical at 4.9%). `release_year` and `acousticness` follow as the next most impactful. Even features like `num_artists` that showed weak linear correlation still contributed positively, a reminder that tree-based models can pick up on patterns that simple correlation misses.
-
-
-**3. Ablation Testing** — we tested the impact of each feature by removing it 
-and retraining the model. Removing any single feature consistently dropped 
-model accuracy:
-
-| Feature Removed | Before | After | Drop |
-|----------------|--------|-------|------|
-| `num_artists` | 0.820 | 0.812 | -0.008 |
-| `release_year` | 0.820 | 0.808 | -0.012 |
-| `tempo_filled` | 0.820 | 0.815 | -0.005 |
-
-This confirms that even features with low linear correlation like `num_artists` 
-(-0.038) still contribute meaningfully to the model — Random Forest captures 
-non-linear patterns that correlation alone misses.  
-
-### Engineered Features
-We engineered three new features on top of the baseline:
-
-1. `loudness_energy_ratio` (loudness / energy): captures the relationship between loudness and energy that neither feature alone conveys. A song can be loud but low energy, or high energy but quiet.
-2. `tempo_filled` : filled 22,114 missing tempo values (19.4% of rows) using the genre median rather than the overall median — because a missing tempo in "classical" is likely different from a missing tempo in "hip-hop".
-3. `num_artists` : counts the number of artists on a track by splitting the artists column by semicolons. Despite having low linear correlation (-0.038), removing it consistently dropped model accuracy, suggesting Random Forest captures non-linear patterns between collaboration count and popularity.
 
 ### Hyperparameter Tuning
 
