@@ -8,7 +8,7 @@ Music popularity is difficult to explain with one simple factor. A song may beco
 
 We use the Spotify Music Tracks dataset, which contains 114,000 rows and 22 columns. Each row represents a single Spotify track, and the columns contain metadata and audio features associated with that track, such as the artist name, album name, release date, duration, explicit status, genre, and Spotify popularity score. The dataset also includes audio features such as danceability, energy, valence, acousticness, instrumentalness, loudness, speechiness, liveness, and tempo. These variables allow us to compare songs not only by genre or popularity, but also by musical characteristics.
 
-Our main data science question is: **Can we predict whether a Spotify track becomes popular using its audio features, genre and metadata?** <br> 
+Our main data science question is: **Can we predict whether a Spotify track becomes popular using its audio features, genre and track metadata?** <br> 
 This question is relevant because music platforms, artists, and playlist curators often rely on data to understand listener behavior and identify patterns behind successful songs. While popularity is influenced by many outside factors that are not captured in this dataset, the available audio features still give us a way to study whether certain types of songs are more likely to perform well.
 
 The dataset contains many variables; however, our analysis focuses on the following columns:
@@ -211,7 +211,7 @@ The observed TVD (0.479) is substantially larger than the values generated under
 
 ## Framing a Prediction Problem
 
-The prediction problem is: can we predict whether a Spotify track is popular using its audio features, genre, and track metadata?
+The prediction problem is: **Can we predict whether a Spotify track is popular using its audio features, genre, and track metadata?** <br> 
 This is a binary classification problem. The response variable is `is_popular`, created by thresholding the popularity score at 50, tracks scoring 50 or above are labeled popular (1), and the rest not popular (0). This threshold labels the top 25% of tracks as popular, giving a reasonable class balance.
 
 At the time of prediction, all audio features, genre, and metadata (duration, explicit status, release year, number of artists) are known properties of the track itself, not outcomes that happen after release.
