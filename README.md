@@ -205,7 +205,7 @@ To investigate whether genre is associated with song popularity, we conducted a 
 
 We chose a permutation test because we wanted to determine whether the observed association between genre and popularity could have occurred by chance. Under the null hypothesis, popularity labels are independent of genre, so randomly permuting the popularity labels simulates what we would expect to see if no relationship existed. We used TVD as our test statistic because it measures the overall difference between two categorical distributions and is therefore well-suited for comparing genre proportions across groups.
 
-The observed TVD (0.479) is substantially larger than the values generated under the null distribution, resulting in a p-value that is effectively 0. Since the p-value is well below our significance level of 0.05, we rejeuct the null hypothesis. This suggests that the distribution of genres differs between popular and non-popular songs and that genre may be an important factor associated with song popularity in our dataset. 
+The observed TVD (0.437) is substantially larger than the values generated under the null distribution, resulting in a p-value that is effectively 0. Since the p-value is well below our significance level of 0.05, we rejeuct the null hypothesis. This suggests that the distribution of genres differs between popular and non-popular songs and that genre may be an important factor associated with song popularity in our dataset. 
 
 ## Framing a Prediction Problem
 
@@ -364,7 +364,7 @@ Group Y: Non-explicit tracks (explicit=False)
   frameborder="0"
 ></iframe>
 
-The plot above shows the distribution of simulated F1 score differences across 1000 permutation trials. The dashed line represents our observed difference of -0.017, which falls well within the center of the simulated distribution. This visually confirms that the difference between explicit and non-explicit tracks is well within what we'd expect by random chance (p-value = 0.407); supporting our conclusion that the model is fair across these two groups.
+The plot above shows the distribution of simulated F1 score differences across 1000 permutation trials. The dashed line represents our observed difference of -0.017, which falls well within the center of the simulated distribution. This visually confirms that the difference between explicit and non-explicit tracks is well within what we'd expect by random chance (p-value = 0.401); supporting our conclusion that the model is fair across these two groups.
 
 ## Conclusion 
 In this project, we built a binary classifier to predict whether a Spotify track is popular using its audio features, genre, and metadata. Starting from a simple baseline model using only `danceability` and `track_genre` (F1: 0.630), we improved performance significantly through feature engineering, adding more audio features, and hyperparameter tuning, reaching a final F1 score of 0.745.
