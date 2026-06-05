@@ -374,5 +374,12 @@ Group Y: Non-explicit tracks (explicit=False)
 
 The plot above shows the distribution of simulated F1 score differences across 1000 permutation trials. The dashed line represents our observed difference of -0.017, which falls well within the center of the simulated distribution. This visually confirms that the difference between explicit and non-explicit tracks is well within what we'd expect by random chance — supporting our conclusion that the model is fair across these two groups.
 
+## Conclusion 
+In this project, we built a binary classifier to predict whether a Spotify track is popular using its audio features, genre, and metadata. Starting from a simple baseline model using only danceability and track_genre (F1: 0.630), we improved performance significantly through feature engineering, adding more audio features, and hyperparameter tuning, reaching a final F1 score of 0.745.
 
+Our analysis revealed that track_genre is by far the strongest predictor of popularity that are pop and hip-hop tracks are dramatically more likely to be popular than classical or country tracks. This finding also surfaced an important limitation: our model performs significantly worse on lower-popularity genres, which is a direct consequence of class imbalance in the training data.
+
+We also attempted to address this genre-based unfairness by setting class_weight='balanced' in our RandomForestClassifier, which instructs the model to pay more attention to underrepresented classes during training. However, this reduced the overall F1 score from 0.745 to 0.727, highlighting a common tension in machine learning: improving fairness for minority groups often comes at the cost of overall model performance.
+
+While our model shows promise, popularity on Spotify is influenced by many factors beyond audio features, such as artist fame, playlist placement, and social trends all play a role that our dataset cannot capture. Future work could explore more sophisticated fairness techniques such as SMOTE oversampling or genre-specific models, as well as incorporating artist-level features or streaming data to better model popularity dynamics.
 
