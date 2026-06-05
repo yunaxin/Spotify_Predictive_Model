@@ -46,13 +46,13 @@ To focus on our research question, we kept only the relevant columns described a
 
 Below is the head of our cleaned DataFrame. 
 
-| track_id               | track_genre   |   popularity |   danceability |   energy |   acousticness | explicit   |   release_year |
-|:-----------------------|:--------------|-------------:|---------------:|---------:|---------------:|:-----------|---------------:|
-| 5SuOikwiRyPMVoIQDJUgSV | acoustic      |           73 |          0.676 |   0.461  |         0.0322 | False      |           1974 |
-| 4qPNDBW1i3p13qLCt0Ki3A | acoustic      |           55 |          0.42  |   0.166  |         0.924  | False      |           1995 |
-| 1iJBSr7s7jYXzM8EGcbK5b | acoustic      |           57 |          0.438 |   0.359  |         0.21   | False      |           1973 |
-| 6lfxq3CG4xtTiEg7opyCyx | acoustic      |           71 |          0.266 |   0.0596 |         0.905  | False      |           2018 |
-| 5vjLSffimiIP26QG5WcN2K | acoustic      |           82 |          0.618 |   0.443  |         0.469  | False      |           2017 |
+| track_id               | track_genre   |   popularity |   danceability |   energy |   acousticness | explicit   |   release_year | is_popular   |
+|:-----------------------|:--------------|-------------:|---------------:|---------:|---------------:|:-----------|---------------:|:-------------|
+| 5SuOikwiRyPMVoIQDJUgSV | acoustic      |           73 |          0.676 |   0.461  |         0.0322 | False      |           1974 | True         |
+| 4qPNDBW1i3p13qLCt0Ki3A | acoustic      |           55 |          0.42  |   0.166  |         0.924  | False      |           1995 | True         |
+| 1iJBSr7s7jYXzM8EGcbK5b | acoustic      |           57 |          0.438 |   0.359  |         0.21   | False      |           1973 | True         |
+| 6lfxq3CG4xtTiEg7opyCyx | acoustic      |           71 |          0.266 |   0.0596 |         0.905  | False      |           2018 | True         |
+| 5vjLSffimiIP26QG5WcN2K | acoustic      |           82 |          0.618 |   0.443  |         0.469  | False      |           2017 | True         |
 
 Note: For readability, only a subset of the columns most relevant to our analysis is shown.
 
