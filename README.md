@@ -93,7 +93,7 @@ This chart reveals a significant difference between explicit and non-explicit tr
 
 ### Bivariate Analysis
 
-To better understand factors associated with popularity, we examined the relationships between popularity and two track characteristics: danceability and explicit status.
+To better understand factors associated with popularity, we examined how popularity varies across different track characteristics.
 
 First, we examined how popularity varies across selected music genres included in our analysis.
 
