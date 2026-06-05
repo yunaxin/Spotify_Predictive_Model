@@ -1,7 +1,7 @@
 # Spotify Track Popularity Prediction
 #### **Using audio features, genre and metadata to classify popular songs**
 **Authors: Anh Tran, Amelia Oo** <br>
-This project was completed for DSC 80 at UC San Diego.
+This project was completed as part of the course DSC 80 at UC San Diego.
 
 ## Introduction
 
