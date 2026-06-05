@@ -95,15 +95,16 @@ This chart reveals a significant difference between explicit and non-explicit tr
 
 To better understand factors associated with popularity, we examined the relationships between popularity and two track characteristics: danceability and explicit status.
 
-First, we examined the relationship between danceability and popularity. 
+First, we examined how popularity varies across selected music genres included in our analysis.
 
 <iframe
-  src="assets/danceability_popularity.html"
-  width="900"
-  height="400"
-  frameborder="0">
+    src="assets/genre_popularity.html"
+    width="900"
+    height="500"
+    frameborder="0">
 </iframe>
-The relationship between danceability and popularity does not appear strongly linear. However, highly popular songs are more frequently observed among tracks with moderate-to-high danceability scores, suggesting that danceability may contribute to a track's success, although it is unlikely to be the sole factor influencing popularity.
+
+The boxplot shows differences in popularity across the six selected genres: classical, country, electronic, hip-hop, metal, and pop. Among these genres, pop and hip-hop tracks generally exhibit higher popularity scores, while classical and country tracks tend to have lower popularity on average. Electronic and metal tracks fall between these extremes. The observed differences suggest that genre may be a meaningful predictor of track popularity and could improve the performance of our popularity classification model.
 
 Next, we compared popularity distributions between explicit and non-explicit tracks.
 
