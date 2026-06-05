@@ -208,7 +208,7 @@ This is a binary classification problem. The response variable is `is_popular`, 
 
 At the time of prediction, all audio features, genre, and metadata (duration, explicit status, release year, number of artists) are known properties of the track itself, not outcomes that happen after release.
 
-We chose F1 score as our evaluation metric instead of accuracy because the dataset is imbalanced, which only about 25% of tracks are popular. A model could achieve high accuracy by simply predicting "not popular" for every track. F1 balances precision and recall, giving a more honest measure of how well the model identifies popular tracks.
+We chose **F1 score** as our evaluation metric instead of accuracy because the dataset is imbalanced, which only about 25% of tracks are popular. A model could achieve high accuracy by simply predicting "not popular" for every track. F1 balances precision and recall, giving a more honest measure of how well the model identifies popular tracks.
 
 ## Baseline Model
 
@@ -234,7 +234,8 @@ The model was trained on 80% of the data and evaluated on the remaining 20% test
 | Recall | 0.582 |
 | F1-score | 0.630 |
 
-The baseline model provides a reasonable starting point, but there is still room for improvement. In particular, the recall score shows that the model only identifies about 58% of popular tracks. This suggests that using only `danceability` and `track_genre` is not enough to fully capture the patterns behind track popularity.
+
+The baseline model provides a reasonable starting point, but there is still room for improvement. Our primary metric, **F1 score (0.630)**, reflects this; in particular, the model only identifies about 58% of popular tracks (recall), meaning it misses nearly half of the tracks it should flag as popular. This  suggests that using only `danceability` and `track_genre` is not enough to fully capture the patterns behind track popularity.
 
 For the final model, we plan to improve performance by adding more Spotify audio features, such as `energy`, `valence`, `acousticness`, `loudness`, `tempo`, and other track-level audio characteristics. We also plan to tune model hyperparameters to better capture more complex relationships between audio features, genre, and popularity.
 
@@ -281,14 +282,18 @@ For the final model, we used `GridSearchCV` with 5-fold cross validation to tune
 
 The best parameters were `max_depth=20` and `n_estimators=100`.
 
+The best parameters were `max_depth=20` and `n_estimators=200`.
+
+Our primary evaluation metric is **F1 score** — all model comparisons are based on F1. Additional metrics are included for reference.
+
 | Metric | Baseline Model | Final Model |
 |---|---:|---:|
+| **F1-score (primary)** | **0.630** | **0.745** |
 | Accuracy | 0.739 | 0.820 |
 | Precision | 0.686 | 0.808 |
 | Recall | 0.582 | 0.691 |
-| F1-score | 0.630 | 0.745 |
 
-Every metric improved significantly from baseline to final, confirming that adding more features, engineering new ones, and tuning hyperparameters all contributed to better performance.
+Our **F1 score improved from 0.630 to 0.745**, confirming that feature engineering and hyperparameter tuning meaningfully improved the  model's ability to identify popular tracks. Every other metric also improved, further validating this conclusion.
 
 
 <iframe
